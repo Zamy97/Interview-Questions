@@ -8,3 +8,5 @@ def is_unique(string):
 
 string = "Akhtar"
 print(is_unique(string))
+
+## Runtime O(n)
