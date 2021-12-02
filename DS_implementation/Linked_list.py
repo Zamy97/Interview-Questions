@@ -27,8 +27,62 @@ class LinkedList:
     def add(self, item):
         temp = Node(item)
         temp.set_next(self.head)
+        print(self.head)
         self.head = temp
 
-    def
+    def size(self):
+        current = self.head
+        count = 0
+        while current != None:
+            count += 1
+            current = current.get_next()
+        return count
 
+    def search(self, item):
+        current = self.head
+        found = False
+        while current != None and not found:
+            if current.get_data() == item:
+                found = True
+            else:
+                current = current.get_next()
+        return found
+
+    def remove(self, item):
+        current = self.head
+        previous = None
+        found = False
+        while not found:
+            if current.get_data == item:
+                found = True
+            else:
+                previous = current
+                current= current.get_next()
+
+        if previous == None:
+            self.head = current.get_next()
+        else:
+            previous.set_next(current.get_next())
+
+    def append(self, item):
+        current = self.head
+        while current.get_next() != None:
+            current = current.get_next()
+        temp = Node(item)
+        temp.set_next(current.get_next())
+        current.set_next(temp)
+
+
+
+
+
+
+linked_list_test = LinkedList()
+
+linked_list_test.add(15)
+linked_list_test.add(24)
+linked_list_test.add(39)
+linked_list_test.add(44)
+
+linked_list_test.is_empty()
 
