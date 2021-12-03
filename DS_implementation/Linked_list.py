@@ -72,6 +72,48 @@ class LinkedList:
         temp.set_next(current.get_next())
         current.set_next(temp)
 
+    def insert(self, at_index, item):
+        """insert an item after index item"""
+        current = self.head
+        for i in range(at_index):
+            current = self.get_next()
+
+        if current != None:
+            temp = Node(item)
+            temp.set_next(current.get_next())
+            current.set_next(temp)
+        else:
+            raise("index out of range")
+
+    def pop(self, index):
+        self.remove(self.get_item(index))
+
+    def get_item(self, index):
+        """return an item given an index"""
+        current = self.head
+        for i in range(index):
+            current = current.getNext()
+        if current != None:
+            return current.getData()
+        else:
+            raise ("index out of range")
+
+    def get_index(self, item):
+        """get the index of an item, assume the first one (head pointing to) is 0"""
+        index = 0
+        current = self.head
+        found = False
+        while current != None:
+            if current.get_data() == item:
+                found = True
+                break
+            else:
+                current = current.get_next()
+                index += 1
+        if not found:
+            index = None
+        return index
+
 
 
 
