@@ -15,7 +15,7 @@ def find_number(number_list, target_number):
         if complementary_number in number_list[i:]:
             print("Solutions Found: {} and {}".format(number, complementary_number))
             return True
-            break
+            break=
         else:
             print("No solution exist")
             return False
