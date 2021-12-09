@@ -114,6 +114,18 @@ class LinkedList:
             index = None
         return index
 
+    def printig_LL(self):
+        result_list = []
+        current = self.head
+        while current:
+            result_list.append(current.get_data())
+            current = current.get_next()
+        print(result_list)
+
+
+
+
+
 
 
 
@@ -121,10 +133,13 @@ class LinkedList:
 
 linked_list_test = LinkedList()
 
-linked_list_test.add(15)
-linked_list_test.add(24)
-linked_list_test.add(39)
-linked_list_test.add(44)
+linked_list_test.add(5)
+linked_list_test.add(4)
+linked_list_test.add(3)
+linked_list_test.add(2)
+linked_list_test.add(1)
 
-linked_list_test.is_empty()
+
+linked_list_test.middle()
+
 
